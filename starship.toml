@@ -1,6 +1,6 @@
 format = """
 [](#3B4252)\
-$python\
+$conda\
 $username\
 [](bg:#434C5E fg:#3B4252)\
 $directory\
@@ -10,6 +10,7 @@ $git_status\
 [](fg:#4C566A bg:#86BBD8)\
 $c\
 $elixir\
+$python\
 $elm\
 $golang\
 $dotnet\
@@ -40,7 +41,7 @@ format = '[$user ]($style)'
 style = "bg:#434C5E"
 format = "[ $path ]($style)"
 truncation_length = 3
-truncation_symbol = "…/"
+truncation_symbol = "/"
 
 # Here is how you can shorten some long paths by text replacement
 # similar to mapped_locations in Oh My Posh:
@@ -114,14 +115,21 @@ symbol = " "
 style = "#3B4252 bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
-[python]
+[conda]
 #style = "#3B4252 bg:#86BBD8"
 #format = '[ $symbol ($version) ]($style)'
 style = "bg:#3B4252"
 format = '[(\($virtualenv\) )]($style)'
 
+[python]
+symbol = ""
+style = "#3B4252 bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+#style = "bg:#3B4252"
+#format = '[(\($virtualenv\) )]($style)'
+
 [dotnet]
-symbol = 'C#'
+symbol = ''
 style = "#3B4252 bg:#86BBD8"
 heuristic = false
 detect_extensions = ['csproj', 'fsproj', 'xproj', '.sln']
