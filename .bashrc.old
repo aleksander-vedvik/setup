@@ -143,7 +143,7 @@ alias notebook="anaconda; jupyter notebook"
 alias fpd="conda activate fpd"
 alias deactivate="conda deactivate"
 
-alias brc="sudo vim ~/.bashrc && source ~/.bashrc"
+alias brc="sudo vim ~/.bashrc"
 alias sbrc="source ~/.bashrc"
 alias recentinstall="grep \" install \" /var/log/dpkg.log"
 alias recentremove="grep \" remove \" /var/log/dpkg.log"
@@ -151,17 +151,6 @@ alias startredis="sudo service redis-server start"
 alias stopredis="sudo service redis-server stop"
 alias startcups="sudo service cups start"
 alias stopcups="sudo service cups stop"
-alias projects="cd ~/projects"
-alias master="cd ~/uis/master/Master/src"
-alias uis="cd ~/uis"
-alias cd..="cd .."
-alias cd.="cd .."
-alias ranger=". ranger"
 
 eval "$(starship init bash)"
 
-export PATH="$PATH:$HOME/.dotnet/tools"
-export DOTNET_ROOT=/usr/share/dotnet
-export MSBuildSDKsPath=$DOTNET_ROOT/sdk/$(${DOTNET_ROOT}/dotnet --version)/Sdks
-export PATH="${PATH}:${DOTNET_ROOT}"
-export PATH="$PATH:$HOME/.dotnet/tools"
